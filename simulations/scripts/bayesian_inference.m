@@ -4,7 +4,7 @@ for i = 1:length(Nstep)
     for j = 1:rep
         load([sim_path filesep 'group_stat' filesep con_files_folder filesep 'Sample_' num2str(Nstep(i),'%03d') '_Rep_' num2str(j,'%03d') filesep 'SPM.mat']);
         cd(SPM.swd)
-        XYZ = SPM.xVol.XYZ;    % coordites
+        XYZ = SPM.xVol.XYZ;    % coordinates
         c = 1;                 % contrast    
         % Load betas
         class_B = c*spm_data_read(SPM.Vbeta,'xyz',XYZ);      % classical 
